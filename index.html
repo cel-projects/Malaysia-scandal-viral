@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privat-Group (Lucah melayu viral new)</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    />
+
+    <!-- Open Graph (Facebook, Telegram, WhatsApp) -->
+    <meta property="og:title" content="Melayu Viral 18+" />
+    <meta property="og:description" content="Join sekarang untuk full video." />
+    <meta
+      property="og:image"
+      content="https://lucah-melayu-viral-18.pages.dev/20.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        display: none; /* Hide by default */
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        z-index: 9999; /* Ensure it covers other content */
+      }
+
+      #loading img {
+        width: 60px; /* Adjust size as needed */
+        height: auto;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+      }
+
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding-bottom: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+      }
+
+      @media (max-width: 768px) {
+        /* Ubah nilai 768px sesuai kebutuhan */
+        .hero {
+          background-position: top center; /* Fokus ke bagian atas gambar */
+          height: 100vh; /* Tinggi hanya setengah layar */
+        }
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        background-color: #ff195a;
+      }
+
+      .logo {
+        color: white;
+        font-size: 28px;
+      }
+
+      .logo span {
+        color: #ea1538;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 20px;
+        margin-right: 20px;
+      }
+
+      nav ul li {
+        list-style-type: none;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        color: #ea1538;
+        transition: 0.3s;
+      }
+
+      .navbar-logo {
+        width: 50px;
+        height: auto;
+      }
+
+      .info {
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        margin: 10px 0 0;
+      }
+
+      .info span {
+        color: white;
+        font-weight: bold;
+        outline: #fff;
+      }
+
+      h1 {
+        display: flex;
+        font-size: 14px;
+        padding: 15px;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+      }
+
+      h1 span {
+        color: #156aea;
+      }
+
+      p {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        margin: 5px 0 5px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .container-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+        flex-direction: column;
+      }
+
+      .btn-daftar {
+        background: linear-gradient(to right, #003ec3, #bc004b);
+        color: white;
+        width: 170%;
+        font-size: 25px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+      }
+
+      .btn-daftar:hover {
+        background-color: #13385f;
+      }
+
+      /* Footer */
+      footer {
+        display: none;
+        background-color: #fff;
+        padding: 5px;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
+
+      footer ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      footer ul li {
+        list-style-type: none;
+      }
+
+      footer ul li a {
+        color: #010101;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer ul li a:hover {
+        color: #ea1538;
+        transition: 0.3s;
+      }
+
+      /* Responsiveness */
+      @media (min-width: 769px) {
+        nav ul {
+          justify-content: flex-end;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          display: none;
+        }
+
+        footer {
+          display: block;
+        }
+
+        .logo {
+          font-size: 24px;
+        }
+
+        .info {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        .btn-daftar {
+          width: 200%;
+          padding: 12px 18px;
+          font-size: 25px;
+        }
+
+        .navbar-logo {
+          width: 40px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo {
+          font-size: 20px;
+        }
+
+        .info {
+          font-size: 20px;
+        }
+
+        .info span {
+          outline: #fff;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        img[src="jawatan.png"] {
+          display: flex;
+          width: 70%;
+          height: auto;
+          /* padding: 40px; */
+          padding-top: 250px;
+          align-items: center;
+          justify-self: center;
+        }
+
+        .btn-daftar {
+          width: 200%;
+          padding: 12px;
+          font-size: 20px;
+        }
+
+        .navbar-logo {
+          width: 30px;
+        }
+
+        .container-1 {
+          padding-top: -200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading">
+      <img src="loading-loading-forever.gif" alt="Loading..." />
+      <!-- Replace with your GIF -->
+    </div>
+    <nav>
+      <h5
+        style="
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          font-size: 20px;
+          color: #fff;
+        "
+      >
+        LUCAH MELAYU VIRAL 18+
+      </h5>
+    </nav>
+    <div class="hero">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          /* background-color: #1e1e1e77; */
+          border-radius: 15px;
+          padding: 30px;
+          /* margin-top: 10px; */
+        "
+      >
+        <img
+          src="20.jpg"
+          alt=""
+          style="width: 130%; height: auto; margin-top: -40px"
+        />
+
+        <div class="container">
+          <button class="btn-daftar" onclick="showLoading('jawatan.html')">
+            Gabung Group
+          </button>
+        </div>
+        <div class="container">
+          <button class="btn-daftar" onclick="showLoading('jawatan.html')">
+            Join Group
+          </button>
+        </div>
+        <p
+          style="
+            font-size: 15px;
+            font-weight: 100;
+            color: #000000e2;
+            margin-top: 20px;
+            font-weight: bold;
+          "
+        >
+          IF YOU WANT TO SEE THE FULL VIDEO, PLEASE JOIN TELEGRAM
+        </p>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          gap: 50px;
+          margin-top: 20px;
+          max-width: 400px;
+          margin-bottom: 20px;
+          text-decoration: none;
+          color: #002ad1;
+        "
+      >
+        <a
+          href="jawatan.html"
+          style="text-decoration: none; font-weight: bold; color: #1e1e1e"
+          >Media</a
+        >
+        <a
+          href="jawatan.html"
+          style="text-decoration: none; font-weight: bold; color: #1e1e1e"
+          >Berkas</a
+        >
+        <a
+          href="jawatan.html"
+          style="text-decoration: none; font-weight: bold; color: #1e1e1e"
+          >Tautan</a
+        >
+      </div>
+
+      <img src="image.png" alt="" style="display: flex; width: 100%" />
+
+      <p
+        style="
+          font-size: 15px;
+          font-weight: 100;
+          color: #000000e2;
+          margin-top: 20px;
+          font-weight: bold;
+        "
+      >
+        ANDA HARUS MENGGUNAKAN NOMOR TELEGRAM JIKA INGIN BERGABUNG DENGAN GRUP
+      </p>
+
+      <video
+        src="3.mp4"
+        controls
+        style="
+          display: flex;
+          width: 100%;
+          height: auto;
+          margin-top: 15px;
+          margin-bottom: 10px;
+        "
+      ></video>
+
+      <a
+        href="jawatan.html"
+        style="
+          display: flex;
+          font-size: 18px;
+          font-weight: 100;
+          color: #000000e2;
+          margin-top: 20px;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          font-weight: bold;
+          color: #0056b3;
+        "
+        >👉 JOIN THE GROUP 👈</a
+      >
+
+      <video
+        src="122.mp4"
+        controls
+        style="
+          display: flex;
+          width: 100%;
+          height: auto;
+          margin-top: 15px;
+          margin-bottom: 10px;
+        "
+      ></video>
+
+      <a
+        href="jawatan.html"
+        style="
+          display: flex;
+          font-size: 18px;
+          font-weight: 100;
+          color: #000000e2;
+          margin-top: 20px;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          font-weight: bold;
+          color: #0056b3;
+          margin-bottom: 50px;
+        "
+        >👉 JOIN THE GROUP 👈</a
+      >
+      <br />
+
+      <script>
+        function showLoading(url) {
+          // Show the loading screen
+          document.getElementById("loading").style.display = "flex";
+
+          // Redirect to the specified URL after 2 seconds
+          setTimeout(function () {
+            window.location.href = url;
+          }, 2000);
+        }
+      </script>
+    </div>
+  </body>
+</html>
